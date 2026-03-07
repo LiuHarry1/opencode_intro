@@ -1,0 +1,2 @@
+hobbies: enjoys traveling in free time
+tooling: prefers using OpenClaw recently
