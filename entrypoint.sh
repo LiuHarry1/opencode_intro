@@ -11,4 +11,5 @@ PORT="${OPENCODE_PORT:-4096}"
 HOST="${OPENCODE_HOST:-0.0.0.0}"
 
 echo "[OK] Serving on $HOST:$PORT"
+if [ -n "${OPENCODE_SERVER_PASSWORD:-}" ]; then echo "[OK] Authentication enabled (OPENCODE_SERVER_PASSWORD set)"; fi
 exec opencode serve --hostname "$HOST" --port "$PORT"
