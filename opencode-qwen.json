@@ -1,0 +1,55 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "provider": {
+    "copilot-api": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "copilot-api",
+      "options": {
+        "baseURL": "http://127.0.0.1:4141"
+      },
+      "models": {
+        "gpt-5.2": {
+          "name": "GPT-5.2"
+        },
+        "gpt-4": {
+          "name": "GPT-4"
+        }
+      }
+    },
+    "dashscope": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "DashScope (Qwen)",
+      "options": {
+        "baseURL": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+        "apiKey": "{env:DASHSCOPE_API_KEY}"
+      },
+      "models": {
+        "qwen-turbo": {
+          "name": "Qwen Turbo"
+        },
+        "qwen-plus": {
+          "name": "Qwen Plus"
+        },
+        "qwen-max": {
+          "name": "Qwen Max"
+        },
+        "qwen-flash": {
+          "name": "Qwen Flash"
+        }
+      }
+    }
+  },
+  "model": "dashscope/qwen-plus",
+  "permission": {
+    "skill": {
+      "*": "allow"
+    },
+    "file": {
+      "read": "allow",
+      "write": "allow"
+    },
+    "shell": "allow"
+  }
+
+
+}
